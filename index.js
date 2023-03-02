@@ -9,6 +9,13 @@ const HTTTP_PORT = 8000;
 const SOCKET_PORT = 8001;
 app.use(bodyParser.json());
 
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "Video Calling backend is running...",
+  })
+});
+
 const emailToSocketMapping = new Map();
 const socketToEmailMapping = new Map();
 
