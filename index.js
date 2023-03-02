@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { Server } = require("socket.io");
+const app = express();
 
 
 // allow cross origin requests
@@ -23,7 +24,6 @@ app.use(corss({
 
 }))
 
-const app = express();
 const HTTTP_PORT = 8000;
 const SOCKET_PORT = 8001;
 app.use(bodyParser.json());
